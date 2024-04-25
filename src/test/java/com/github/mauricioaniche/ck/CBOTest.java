@@ -139,10 +139,11 @@ public class CBOTest extends BaseTest {
 		Assertions.assertEquals(6, a.getCbo());
 	}
 
+
 	@Test
-	public void testCouplingZero() {
-		CKClassResult a = report.get("cbo.CouplingZero");
-		Assertions.assertEquals(0, a.getCbo());
+	public void testCompositionExample() {
+		CKClassResult a = report.get("cbo.CompositionExample");
+		Assertions.assertEquals(1, a.getCbo());
 	}
 
 }
