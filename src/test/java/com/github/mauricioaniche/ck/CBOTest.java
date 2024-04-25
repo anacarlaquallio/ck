@@ -141,8 +141,8 @@ public class CBOTest extends BaseTest {
 
 
 	@Test
-	public void testCompositionExample() {
-		CKClassResult a = report.get("cbo.CompositionExample");
+	public void testComposition() {
+		CKClassResult a = report.get("cbo.Composition");
 		Assertions.assertEquals(1, a.getCbo());
 	}
 
