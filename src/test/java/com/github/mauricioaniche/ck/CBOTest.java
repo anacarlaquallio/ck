@@ -14,30 +14,30 @@ public class CBOTest extends BaseTest {
 	public void setUp() {
 		report = run(fixturesDir() + "/cbo");
 	}
-	
+
 	@Test
 	public void ignoreJavaTypes() {
 		CKClassResult a = report.get("cbo.Coupling0");
 		Assertions.assertEquals(0, a.getCbo());
 	}
-	
+
 	@Test
 	public void countDifferentPossibilitiesOfDependencies() {
-		
+
 		CKClassResult a = report.get("cbo.Coupling1");
 		Assertions.assertEquals(6, a.getCbo());
 	}
-	
+
 	@Test
 	public void countEvenWhenNotResolved() {
-		
+
 		CKClassResult a = report.get("cbo.Coupling3");
 		Assertions.assertEquals(1, a.getCbo());
 	}
-	
+
 	@Test
 	public void countInterfacesAndInheritances() {
-		
+
 		CKClassResult b = report.get("cbo.Coupling2");
 		Assertions.assertEquals(5, b.getCbo());
 	}
@@ -50,7 +50,7 @@ public class CBOTest extends BaseTest {
 
 	@Test
 	public void countMethodParameters() {
-		
+
 		CKClassResult b = report.get("cbo.MethodParams");
 		Assertions.assertEquals(2, b.getCbo());
 	}
@@ -92,7 +92,7 @@ public class CBOTest extends BaseTest {
 		Assertions.assertEquals(2, g.getCbo());
 
 	}
-	
+
 	@Test
 	public void moreCouplingWithGenericsAndJavaType() {
 		CKClassResult b = report.get("cbo.Coupling7");
@@ -138,4 +138,11 @@ public class CBOTest extends BaseTest {
 		CKClassResult a = report.get("cbo.Coupling11");
 		Assertions.assertEquals(6, a.getCbo());
 	}
+
+	@Test
+	public void testCouplingZero() {
+		CKClassResult a = report.get("cbo.CouplingZero");
+		Assertions.assertEquals(0, a.getCbo());
+	}
+
 }
