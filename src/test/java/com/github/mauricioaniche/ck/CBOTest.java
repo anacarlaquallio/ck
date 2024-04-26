@@ -146,4 +146,30 @@ public class CBOTest extends BaseTest {
 		Assertions.assertEquals(1, a.getCbo());
 	}
 
+	@Test
+	public void testDZero() {
+    CKClassResult a = report.get("cbo.D");
+    Assertions.assertEquals(0, a.getCbo());
+	}
+
+
+    @Test
+    public void testCBO_A() {
+
+        CKClassResult a = report.get("cbo.A");
+        Assertions.assertEquals(0, a.getCbo());
+    }
+
+	@Test
+    public void testCBO_CInterface() {
+        CKClassResult a = report.get("cbo.CInterface");
+        Assertions.assertEquals(0, a.getCbo());
+    }
+
+	@Test
+    public void testCBO_Box() {
+        CKClassResult a = report.get("cbo.Box");
+        Assertions.assertEquals(0, a.getCbo());
+    }
+
 }

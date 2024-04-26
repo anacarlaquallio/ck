@@ -1,9 +1,9 @@
 package cbo;
 
-public class CompositionExample {
+public class Composition {
     private B bObject;
 
-    public CompositionExample(B bObject) {
+    public Composition(B bObject) {
         this.bObject = bObject;
     }
 
