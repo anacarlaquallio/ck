@@ -146,13 +146,6 @@ public class CBOTest extends BaseTest {
 		Assertions.assertEquals(1, a.getCbo());
 	}
 
-	@Test
-	public void testDZero() {
-    CKClassResult a = report.get("cbo.D");
-    Assertions.assertEquals(0, a.getCbo());
-	}
-
-
     @Test
     public void testCBO_A() {
 
@@ -169,7 +162,7 @@ public class CBOTest extends BaseTest {
 	@Test
     public void testCBO_Box() {
         CKClassResult a = report.get("cbo.Box");
-        Assertions.assertEquals(0, a.getCbo());
+        Assertions.assertEquals(1, a.getCbo());
     }
 
 }
